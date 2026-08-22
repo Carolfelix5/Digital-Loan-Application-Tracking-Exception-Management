@@ -18,7 +18,7 @@ This case study is presented **in progress, not completed** — the pilot is mid
 
 FinNova's digital loan platform captures applications digitally, but everything downstream is manual: document validation, exception handling, SLA monitoring, and customer communication. This isn't just slow — applications can genuinely stall without anyone noticing, since a missing document, an unresolved exception, and a simple queue backlog all look identical from the outside today. Two consequences drove this project: inconsistent, undocumented exception handling, and customers with zero visibility into where their application stands.
 
-Full context: [`01_Business_Case.docx`](./docs/01_Business_Case.docx) · [`02_Project_Charter.docx`](./docs/02_Project_Charter.docx)
+Full context: [`01_Business_Case.docx`](./01_Business%20Case.pdf) · [`02_Project_Charter.docx`](./docs/02_Project_Charter.docx)
 
 ---
 
