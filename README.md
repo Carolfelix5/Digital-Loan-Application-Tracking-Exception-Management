@@ -10,7 +10,7 @@
 
 This is a self-directed case study built to practice the end-to-end business analyst lifecycle on a realistic FinTech scenario, applying BABOK's Core Concept Model (BACCM) and six Knowledge Areas throughout. FinNova Digital Finance, all stakeholders, and all data in this repository are fictional. Every artifact — requirements, business rules, test results, and defects — was self-authored to demonstrate business analysis process and documentation skill, not the output of a production deployment.
 
-This case study is presented **in progress, not completed** — the pilot is mid-sprint, several requirements are not yet built, and the primary success metric isn't measurable yet. That's intentional: an honest snapshot of real BA work in flight is more useful to demonstrate than a fictional "everything succeeded" ending.
+This case study is presented **in progress, not completed** — the pilot is mid-sprint, several requirements are not yet built, and the primary success metric isn't measurable yet. That's intentional
 
 ---
 
