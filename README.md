@@ -83,7 +83,7 @@ This framing came directly out of elicitation — the original scope draft cente
 | Defects logged | 5 (3 resolved, 2 open) |
 | Primary KPI (48h → 24h TAT) | Not yet measurable — SLA Tracking pillar still in development |
 
-Full sprint board: [`14_Jira_Board_Mock.png`](./14_Jira%20Screenshot.png) · Full KPI detail: [`19_KPI_Report.xlsx`](./19_KPI%20Reports-BRD%20KPI%20Reports.pdf)
+Full sprint board: [`14_Jira_Board_Mock.png`](./14_Jira%20Screenshot.png) · Full KPI detail: [`19_KPI_Report.xlsx`](./19_KPI%20Reports%20-%20BRD%20KPI%20Reports.pdf))
 
 **What's validated so far:** the two capabilities most directly tied to the original business problem — automated completeness checking and mandatory exception audit trail — are both built, tested, and passing. **What isn't yet:** anything depending on SLA Tracking, which is the least mature pillar and the dependency for the project's headline metric. Full detail in [`18_Solution_Evaluation.docx`](./18_Solution%20Evaluation.pdf).
 
@@ -93,7 +93,7 @@ Full sprint board: [`14_Jira_Board_Mock.png`](./14_Jira%20Screenshot.png) · Ful
 
 - **A genuine stakeholder disagreement** surfaced in elicitation (Operations Manager wanted auto-assignment of exceptions by workload; Credit Analyst wanted self-selection) and had to be escalated and resolved via a joint follow-up session before requirements could be finalized. The resolution — auto-assign with a 2-hour analyst override window — became a formal business rule.
 - **An unresolved dependency** (Product Manager wants detailed exception reasons shown to customers; Compliance wants review before anything goes live) is still open and explicitly tracked as a blocker on one requirement (BR-13), rather than quietly resolved for narrative convenience.
-- **Testing found real issues**, three of which were fixed during UAT (a validation gap that let whitespace-only audit reasons pass, a document request that defaulted to a generic label instead of naming the specific missing item, a duplicate entry in a missing-items list) — logged in [`17_Defect_Log.xlsx`](./17_Defect%20Log-Defect%20Log.pdf).
+- **Testing found real issues**, three of which were fixed during UAT (a validation gap that let whitespace-only audit reasons pass, a document request that defaulted to a generic label instead of naming the specific missing item, a duplicate entry in a missing-items list) — logged in [`17_Defect_Log`](./17_Defect%20Log%20-%20Defect%20Log.pdf).
 - **One finding (DEF-02) wasn't a bug at all** — the system correctly falls back to manual review for unclassified exceptions, but nothing yet prompts a human to convert a recurring fallback pattern into a new formal rule. That's a process-design gap surfaced through testing, and it's carried forward as a recommendation rather than force-fit into a code fix.
 
 ---
@@ -104,7 +104,7 @@ Requirements were elicited from four primary stakeholders (Operations Manager, C
 
 This project explicitly maps to BABOK's Business Analysis Core Concept Model and six Knowledge Areas — see for the full mapping from Change/Need/Solution/Stakeholder/Value/Context through to specific project artifacts.
 
-Every requirement traces end-to-end: Pain Point → Gap Analysis → Business Requirement → Functional Requirement → User Story → Test Case, documented in the [`15_RTM.xlsx`](./Requirements%20Traceability%20Matrix.pdf).
+Every requirement traces end-to-end: Pain Point → Gap Analysis → Business Requirement → Functional Requirement → User Story → Test Case, documented in the [`15_RTM.xlsx`](./15_Requirements%20Traceability%20Matrix.pdf).
 
 ---
 
