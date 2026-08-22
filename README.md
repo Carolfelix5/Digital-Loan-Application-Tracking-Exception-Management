@@ -18,7 +18,7 @@ This case study is presented **in progress, not completed** — the pilot is mid
 
 FinNova's digital loan platform captures applications digitally, but everything downstream is manual: document validation, exception handling, SLA monitoring, and customer communication. This isn't just slow — applications can genuinely stall without anyone noticing, since a missing document, an unresolved exception, and a simple queue backlog all look identical from the outside today. Two consequences drove this project: inconsistent, undocumented exception handling, and customers with zero visibility into where their application stands.
 
-Full context: [`01_Business_Case.docx`](./01_Business%20Case.pdf) · [`02_Project_Charter.docx`](./docs/02_Project_Charter.docx)
+Full context: [`01_Business_Case.docx`](./01_Business%20Case.pdf) · [`02_Project_Charter.docx`](./02_Project%20Charter.pdf)
 
 ---
 
@@ -31,7 +31,7 @@ Full context: [`01_Business_Case.docx`](./01_Business%20Case.pdf) · [`02_Projec
 | **3. Document Management** | Automated detection and follow-up on missing documents, replacing informal one-off emails |
 | **4. Exception Management** | Rules-based classification and assignment, with a mandatory, immutable audit trail |
 
-This framing came directly out of elicitation — the original scope draft centered too narrowly on exception handling alone; stakeholder interviews surfaced that tracking, SLA visibility, and document follow-up were equally significant, unaddressed problems. See [`06_Elicitation_Notes.docx`](./docs/06_Elicitation_Notes.docx) for how that reframing happened.
+This framing came directly out of elicitation — the original scope draft centered too narrowly on exception handling alone; stakeholder interviews surfaced that tracking, SLA visibility, and document follow-up were equally significant, unaddressed problems. See [`04_Elicitation_Notes.docx`](./04_Elicitation%20Notes.pdf) for how that reframing happened.
 
 ---
 
@@ -42,24 +42,22 @@ This framing came directly out of elicitation — the original scope draft cente
   01_Business_Case.docx
   02_Project_Charter.docx
   03_Stakeholder_Register.xlsx
-  04_BABOK_BACCM_Alignment.docx
-  05_Self_Build_Guide.md
-  06_Elicitation_Notes.docx
-  07_AsIs_Process_Diagram.png
-  08_Pain_Points_Root_Cause.xlsx
-  09_ToBe_Process_Diagram.png
-  10_Gap_Analysis.xlsx
-  11_BRD.docx
-  12_FRD.docx
-  13_Business_Rules_Document.xlsx
-  14_User_Stories_and_Acceptance_Criteria.xlsx
-  15_Prioritization_MoSCoW.xlsx
-  16_Jira_Board_Mock.png
-  17_RTM.xlsx
-  18_UAT_Test_Cases.xlsx
-  19_Defect_Log.xlsx
-  20_Solution_Evaluation.docx
-  21_KPI_Report.xlsx
+  04_Elicitation_Notes.docx
+  05_AsIs_Process_Diagram.png
+  06_Pain_Points_Root_Cause.xlsx
+  07_ToBe_Process_Diagram.png
+  08_Gap_Analysis.xlsx
+  09_BRD.docx
+  10_FRD.docx
+  11_Business_Rules_Document.xlsx
+  12_User_Stories_and_Acceptance_Criteria.xlsx
+  13_Prioritization_MoSCoW.xlsx
+  14_Jira_Board_Mock.png
+  15_RTM.xlsx
+  16_UAT_Test_Cases.xlsx
+  17_Defect_Log.xlsx
+  18_Solution_Evaluation.docx
+  19_KPI_Report.xlsx
 /README.md   <- this file
 ```
 
@@ -68,14 +66,14 @@ This framing came directly out of elicitation — the original scope draft cente
 ## Process Flow
 
 **AS-IS (Current State)**
-![AS-IS Process](./docs/07_AsIs_Process_Diagram.png)
+![AS-IS Process](./05_AS-%20IS%20Process.drawio.pdf)
 
 **TO-BE (Target State)**
-![TO-BE Process](./docs/09_ToBe_Process_Diagram.png)
+![TO-BE Process](./07_TO-%20BE%20Process.drawio.pdf)
 
 ---
 
-## Current Status (Sprint 3, Personal Loan Pilot)
+## Current Status (Sprint 1, Personal Loan Pilot)
 
 | | |
 |---|---|
@@ -85,9 +83,9 @@ This framing came directly out of elicitation — the original scope draft cente
 | Defects logged | 5 (3 resolved, 2 open) |
 | Primary KPI (48h → 24h TAT) | Not yet measurable — SLA Tracking pillar still in development |
 
-Full sprint board: [`16_Jira_Board_Mock.png`](./docs/16_Jira_Board_Mock.png) · Full KPI detail: [`21_KPI_Report.xlsx`](./docs/21_KPI_Report.xlsx)
+Full sprint board: [`14_Jira_Board_Mock.png`](./14_Jira%20Screenshot.png) · Full KPI detail: [`19_KPI_Report.xlsx`](./19_KPI%20Reports-BRD%20KPI%20Reports.pdf)
 
-**What's validated so far:** the two capabilities most directly tied to the original business problem — automated completeness checking and mandatory exception audit trail — are both built, tested, and passing. **What isn't yet:** anything depending on SLA Tracking, which is the least mature pillar and the dependency for the project's headline metric. Full detail in [`20_Solution_Evaluation.docx`](./docs/20_Solution_Evaluation.docx).
+**What's validated so far:** the two capabilities most directly tied to the original business problem — automated completeness checking and mandatory exception audit trail — are both built, tested, and passing. **What isn't yet:** anything depending on SLA Tracking, which is the least mature pillar and the dependency for the project's headline metric. Full detail in [`18_Solution_Evaluation.docx`](./18_Solution%20Evaluation.pdf).
 
 ---
 
@@ -95,7 +93,7 @@ Full sprint board: [`16_Jira_Board_Mock.png`](./docs/16_Jira_Board_Mock.png) · 
 
 - **A genuine stakeholder disagreement** surfaced in elicitation (Operations Manager wanted auto-assignment of exceptions by workload; Credit Analyst wanted self-selection) and had to be escalated and resolved via a joint follow-up session before requirements could be finalized. The resolution — auto-assign with a 2-hour analyst override window — became a formal business rule.
 - **An unresolved dependency** (Product Manager wants detailed exception reasons shown to customers; Compliance wants review before anything goes live) is still open and explicitly tracked as a blocker on one requirement (BR-13), rather than quietly resolved for narrative convenience.
-- **Testing found real issues**, three of which were fixed during UAT (a validation gap that let whitespace-only audit reasons pass, a document request that defaulted to a generic label instead of naming the specific missing item, a duplicate entry in a missing-items list) — logged in [`19_Defect_Log.xlsx`](./docs/19_Defect_Log.xlsx).
+- **Testing found real issues**, three of which were fixed during UAT (a validation gap that let whitespace-only audit reasons pass, a document request that defaulted to a generic label instead of naming the specific missing item, a duplicate entry in a missing-items list) — logged in [`17_Defect_Log.xlsx`](./17_Defect%20Log-Defect%20Log.pdf).
 - **One finding (DEF-02) wasn't a bug at all** — the system correctly falls back to manual review for unclassified exceptions, but nothing yet prompts a human to convert a recurring fallback pattern into a new formal rule. That's a process-design gap surfaced through testing, and it's carried forward as a recommendation rather than force-fit into a code fix.
 
 ---
@@ -104,9 +102,9 @@ Full sprint board: [`16_Jira_Board_Mock.png`](./docs/16_Jira_Board_Mock.png) · 
 
 Requirements were elicited from four primary stakeholders (Operations Manager, Credit Analyst, Compliance, Product Manager), each assigned deep elicitation based on their role in the Stakeholder Register — other stakeholders (Operations Officer, Customer Support, Customer) were represented through those four sessions rather than interviewed separately, matching how influence and engagement actually work on a real project.
 
-This project explicitly maps to BABOK's Business Analysis Core Concept Model and six Knowledge Areas — see [`04_BABOK_BACCM_Alignment.docx`](./docs/04_BABOK_BACCM_Alignment.docx) for the full mapping from Change/Need/Solution/Stakeholder/Value/Context through to specific project artifacts.
+This project explicitly maps to BABOK's Business Analysis Core Concept Model and six Knowledge Areas — see for the full mapping from Change/Need/Solution/Stakeholder/Value/Context through to specific project artifacts.
 
-Every requirement traces end-to-end: Pain Point → Gap Analysis → Business Requirement → Functional Requirement → User Story → Test Case, documented in the [`17_RTM.xlsx`](./docs/17_RTM.xlsx).
+Every requirement traces end-to-end: Pain Point → Gap Analysis → Business Requirement → Functional Requirement → User Story → Test Case, documented in the [`15_RTM.xlsx`](./Requirements%20Traceability%20Matrix.pdf).
 
 ---
 
