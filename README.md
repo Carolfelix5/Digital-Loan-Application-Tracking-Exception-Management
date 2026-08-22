@@ -2,7 +2,7 @@
 ### A Business Analysis Portfolio Case Study — FinNova Digital Finance (Fictional)
 
 **Author:** Carol Felix, Business Analyst
-**Methodology:** Agile/Scrum · Status: In Progress (Sprint 3 of pilot)
+**Methodology:** Agile/Scrum · Status: In Progress (Sprint 1 of pilot)
 
 ---
 
